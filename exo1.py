@@ -32,7 +32,7 @@ Prompts EXACTS a utiliser :
 
 # TODO: Convertir en heures/minutes et afficher exactement 4 lignes
 
-nom_complet = input("Entrez votre nom complet : ")
+nom = input("Entrez votre nom complet : ")
 match_football = int(input("Entrez le nombre de matchs de football des Carabins suivis cet automne : "))
 duree_football = int(input("Entrez la duree moyenne d'un match de football suivi (en minutes) : "))
 match_soccer = int(input("Entrez le nombre de matchs de soccer feminin des Carabins suivis cet automne : "))
@@ -48,9 +48,13 @@ heure_football = total_min_football // 60
 min_restant_football =  total_min_football % 60
 heure_soccer = total_min_soccer // 60
 min_restant_soccer = total_min_soccer % 60
-print(F"Bonjour {nom_complet}")
-print(f"Football (carabin) : {match_football} match(s), {heure_football}h{min_restant_football} de visionnage")
-print(f"Soccer(carabins):{match_soccer} match(s), {heure_soccer}h{min_restant_soccer} de visionnage")
+
+heure_total = heure_football + heure_soccer + ((min_restant_football + min_restant_soccer) % 60)
+min_total = (min_restant_football + min_restant_soccer) % 60
+
+print(F"Bonjour {nom}")
+print(f"Football (carabin): {match_football} match(s), {heure_football}h{min_restant_football} de visionnage")
+print(f"Soccer(carabins): {match_soccer} match(s), {heure_soccer}h{min_restant_soccer} de visionnage")
 print(f"total: {heure_football + heure_soccer}h{min_restant_football + min_restant_soccer}")
 
 

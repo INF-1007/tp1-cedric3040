@@ -54,9 +54,9 @@ for i in range(len(liste_intensite_brute)):
     niveau.append(int((liste_intensite_brute[i] / intensite_max) * 10 + 0.5))
 
 hauteur_niveau = ["10 |", " 9 |", " 8 |", " 7 |", " 6 |", " 5 |", " 4 |", " 3 |"," 2 |"," 1 |"]
-
+print(niveau)
 indice_hauteur_niveau = 10
-liste_str_lettre = ["A", "B","C","D","E","F","G","H"]
+liste_str_lettre = [" A", "B","C","D","E","F","G","H"]
 
 for i in range (10):
     print(hauteur_niveau[i], end=" ")
