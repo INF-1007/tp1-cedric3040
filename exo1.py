@@ -31,3 +31,26 @@ Prompts EXACTS a utiliser :
 # TODO: Calculer les minutes totales (football, soccer, total)
 
 # TODO: Convertir en heures/minutes et afficher exactement 4 lignes
+
+nom_complet = input("Entrez votre nom complet : ")
+match_football = int(input("Entrez le nombre de matchs de football des Carabins suivis cet automne : "))
+duree_football = int(input("Entrez la duree moyenne d'un match de football suivi (en minutes) : "))
+match_soccer = int(input("Entrez le nombre de matchs de soccer feminin des Carabins suivis cet automne : "))
+duree_soccer = int(input("Entrez la duree moyenne d'un match de soccer suivi (en minutes) : "))
+
+if match_football <= 0 or duree_football < 0 or match_soccer <= 0 or duree_soccer < 0:
+    print("Erreur - donnees invalides.")
+    exit()
+total_min_football = match_football * duree_soccer
+total_min_soccer = match_soccer * duree_soccer
+
+heure_football = total_min_football // 60
+min_restant_football =  total_min_football % 60
+heure_soccer = total_min_soccer // 60
+min_restant_soccer = total_min_soccer % 60
+print("bonjour", nom_complet)
+print(f"Football (carabin) : {match_football} match, {heure_football}h{min_restant_football} de visonnage")
+print(f"Soccer(carabins):{match_soccer} match, {heure_soccer}h{min_restant_soccer} de visonnage")
+print(f"total :{heure_football + heure_soccer}h{min_restant_football + min_restant_soccer}")
+
+
