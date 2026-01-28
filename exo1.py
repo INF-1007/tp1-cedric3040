@@ -48,9 +48,9 @@ heure_football = total_min_football // 60
 min_restant_football =  total_min_football % 60
 heure_soccer = total_min_soccer // 60
 min_restant_soccer = total_min_soccer % 60
-print("bonjour", nom_complet)
-print(f"Football (carabin) : {match_football} match, {heure_football}h{min_restant_football} de visonnage")
-print(f"Soccer(carabins):{match_soccer} match, {heure_soccer}h{min_restant_soccer} de visonnage")
-print(f"total :{heure_football + heure_soccer}h{min_restant_football + min_restant_soccer}")
+print(F"Bonjour {nom_complet}")
+print(f"Football (carabin) : {match_football} match(s), {heure_football}h{min_restant_football} de visionnage")
+print(f"Soccer(carabins):{match_soccer} match(s), {heure_soccer}h{min_restant_soccer} de visionnage")
+print(f"total: {heure_football + heure_soccer}h{min_restant_football + min_restant_soccer}")
 
 
