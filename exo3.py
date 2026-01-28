@@ -35,3 +35,5 @@ Prompts EXACTS :
 # TODO: Calculer, arrondir (ceil) et determiner le(s) meilleur(s)
 
 # TODO: Afficher la phrase exacte
+
+import math
