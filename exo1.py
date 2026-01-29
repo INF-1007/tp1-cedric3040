@@ -44,7 +44,7 @@ if match_football <= 0 or duree_football < 0 or match_soccer <= 0 or duree_socce
     print("Erreur - donnees invalides.")
     exit()
     
-total_min_football = match_football * duree_soccer
+total_min_football = match_football * duree_football
 total_min_soccer = match_soccer * duree_soccer
 
 heure_football = total_min_football // 60
@@ -55,7 +55,7 @@ min_restant_soccer = total_min_soccer % 60
 heure_total = heure_football + heure_soccer + ((min_restant_football + min_restant_soccer) % 60)
 min_total = (min_restant_football + min_restant_soccer) % 60
 
-print(F"Bonjour {nom}")
+print(f"Bonjour {nom}")
 print(f"Football (carabin): {match_football} match(s), {heure_football}h{min_restant_football:02d} de visionnage")
 print(f"Soccer (carabins): {match_soccer} match(s), {heure_soccer}h{min_restant_soccer:02d} de visionnage")
 print(f"Total: {heure_total}h{min_total:02d}")
