@@ -56,8 +56,8 @@ heure_total = heure_football + heure_soccer + ((min_restant_football + min_resta
 min_total = (min_restant_football + min_restant_soccer) % 60
 
 print(F"Bonjour {nom}")
-print(f"Football (carabin): {match_football} match(s), {heure_football}h{min_restant_football} de visionnage")
-print(f"Soccer(carabins): {match_soccer} match(s), {heure_soccer}h{min_restant_soccer} de visionnage")
-print(f"total: {heure_football + heure_soccer}h{min_restant_football + min_restant_soccer}")
+print(f"Football (carabin): {match_football} match(s), {heure_football}h{min_restant_football:02d} de visionnage")
+print(f"Soccer(carabins): {match_soccer} match(s), {heure_soccer}h{min_restant_soccer:02d} de visionnage")
+print(f"total: {heure_total}h{min_total:02d}")
 
 
