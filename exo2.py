@@ -28,15 +28,19 @@ FACTEURS = [1.30, 1.15, 1.05, 0.95, 0.95, 1.05, 1.15, 1.30]
 # TODO: Calculer les niveaux normalises (liste de 8 entiers dans [0,10])
 
 # TODO: Afficher la grille (10 lignes) puis la ligne des labels\
-
-A = int(input("A:"))
-B = int(input("B:"))
-C = int(input("C:"))
-D = int(input("D:"))
-E = int(input("E:"))
-F = int(input("F:"))
-G = int(input("G:"))
-H = int(input("H:"))
+try:
+    A = int(input("A:"))
+    B = int(input("B:"))
+    C = int(input("C:"))
+    D = int(input("D:"))
+    E = int(input("E:"))
+    F = int(input("F:"))
+    G = int(input("G:"))
+    H = int(input("H:"))
+except ValueError:
+    print("Erreur - donnees invalides.")
+    exit()
+    
 liste_place = [A, B, C, D, E, F, G, H]
 
 if A < 0 or B < 0 or C < 0 or D < 0 or E < 0 or F < 0 or G < 0 or H < 0:

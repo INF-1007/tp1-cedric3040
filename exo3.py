@@ -49,9 +49,10 @@ except ValueError:
 if distance <= 0 or attente_navette <= 0 or temps_metro <= 0 or controle < 0:
     print("Erreur - donnees invalides.")
     exit()
-marche  = int((distance * 60 / 5 + controle) + 0.5)
-navette = int((attente_navette + distance * 60 / 18 + controle) + 0.5)
-metro   = int((temps_metro + controle) + 0.5)
+marche  = math.ceil((distance * 60 / 5 + controle) + 0.5)
+navette = math.ceil((attente_navette + distance * 60 / 18 + controle) + 0.5)
+metro   = math.ceil((temps_metro + controle) + 0.5)
+
 if marche == navette == metro:
     print("Egalite : marcher, navette et metro.")
     exit()

@@ -33,31 +33,32 @@ Prompts EXACTS a utiliser :
 # TODO: Convertir en heures/minutes et afficher exactement 4 lignes
 try:
     nom = input("Entrez votre nom complet : ")
-    match_football = int(input("Entrez le nombre de matchs de football des Carabins suivis cet automne : "))
+    A = int(input("Entrez le nombre de matchs de football des Carabins suivis cet automne : "))
     duree_football = int(input("Entrez la duree moyenne d'un match de football suivi (en minutes) : "))
-    match_soccer = int(input("Entrez le nombre de matchs de soccer feminin des Carabins suivis cet automne : "))
+    B = int(input("Entrez le nombre de matchs de soccer feminin des Carabins suivis cet automne : "))
     duree_soccer = int(input("Entrez la duree moyenne d'un match de soccer suivi (en minutes) : "))
 except ValueError:
     print("Erreur - donnees invalides.")
-    
-if match_football <= 0 or duree_football < 0 or match_soccer <= 0 or duree_soccer < 0:
+    exit()
+
+if A <= 0 or duree_football < 0 or B <= 0 or duree_soccer < 0:
     print("Erreur - donnees invalides.")
     exit()
     
-total_min_football = match_football * duree_football
-total_min_soccer = match_soccer * duree_soccer
+total_min_football = A * duree_football
+total_min_soccer = B * duree_soccer
 
-heure_football = total_min_football // 60
-min_restant_football =  total_min_football % 60
-heure_soccer = total_min_soccer // 60
-min_restant_soccer = total_min_soccer % 60
+Hf = total_min_football // 60
+Mf =  total_min_football % 60
+Hs = total_min_soccer // 60
+Ms = total_min_soccer % 60
 
-heure_total = heure_football + heure_soccer + ((min_restant_football + min_restant_soccer) % 60)
-min_total = (min_restant_football + min_restant_soccer) % 60
+Ht = Hf + Hs + ((Mf + Ms) % 60)
+Mt = (Mf + Ms) % 60
 
 print(f"Bonjour {nom}")
-print(f"Football (carabin): {match_football} match(s), {heure_football}h{min_restant_football:02d} de visionnage")
-print(f"Soccer (carabins): {match_soccer} match(s), {heure_soccer}h{min_restant_soccer:02d} de visionnage")
-print(f"Total: {heure_total}h{min_total:02d}")
+print(f"Football (Carabins): {A} match(s), {Hf}h{Mf:02d} de visionnage")
+print(f"Soccer (Carabins): {B} match(s), {Hs}h{Ms:02d} de visionnage")
+print(f"Total: {Ht}h{Mt:02d}")
 
 
