@@ -70,13 +70,17 @@ for i in range (10):
     print(hauteur_niveau[i], end=" ")
 
 
-    for y in range(8):
+    for y in range(7):
         if niveau[y] >= indice_hauteur_niveau:
             print("❚",end=" ")
         else:
             print(".",end=" ")
         
-    print()
+    if niveau[7] >= indice_hauteur_niveau:
+            print("❚")
+    else:
+        print(".")
+        
     indice_hauteur_niveau -= 1
 
 for i in range(len(liste_str_lettre) + 2):

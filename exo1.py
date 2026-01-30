@@ -41,7 +41,7 @@ except ValueError:
     print("Erreur - donnees invalides.")
     exit()
 
-if A <= 0 or duree_football < 0 or B <= 0 or duree_soccer < 0:
+if A < 0 or duree_football <= 0 or B < 0 or duree_soccer <= 0:
     print("Erreur - donnees invalides.")
     exit()
     

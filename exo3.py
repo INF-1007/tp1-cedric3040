@@ -46,7 +46,7 @@ except ValueError:
     print("Erreur - donnees invalides.")
     exit()
 
-if distance <= 0 or attente_navette <= 0 or temps_metro <= 0 or controle < 0:
+if distance < 0 or attente_navette < 0 or temps_metro < 0 or controle < 0:
     print("Erreur - donnees invalides.")
     exit()
 marche  = math.ceil(distance * 60 / 5 + controle)
