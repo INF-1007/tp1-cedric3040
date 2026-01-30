@@ -53,7 +53,7 @@ Mf =  total_min_football % 60
 Hs = total_min_soccer // 60
 Ms = total_min_soccer % 60
 
-Ht = Hf + Hs + ((Mf + Ms) % 60)
+Ht = Hf + Hs + ((Mf + Ms) // 60)
 Mt = (Mf + Ms) % 60
 
 print(f"Bonjour {nom}")

@@ -49,19 +49,19 @@ except ValueError:
 if distance <= 0 or attente_navette <= 0 or temps_metro <= 0 or controle < 0:
     print("Erreur - donnees invalides.")
     exit()
-marche  = math.ceil((distance * 60 / 5 + controle) + 0.5)
-navette = math.ceil((attente_navette + distance * 60 / 18 + controle) + 0.5)
-metro   = math.ceil((temps_metro + controle) + 0.5)
+marche  = math.ceil(distance * 60 / 5 + controle)
+navette = math.ceil(attente_navette + distance * 60 / 18 + controle)
+metro   = math.ceil(temps_metro + controle)
 
 if marche == navette == metro:
     print("Egalite : marcher, navette et metro.")
     exit()
 liste_transport = [["marche",marche], ["navette", navette], ["metro", metro]]
-plus_petit = 0
+plus_petit = liste_transport[1][1]
 indice_petit = 0
 
 for i in range(3):  
-    if plus_petit > liste_transport[i][1]:
+    if plus_petit >= liste_transport[i][1]:
         plus_petit = liste_transport[i][1]
         indice_petit = i
 
@@ -70,11 +70,11 @@ for i in range(3):
 
     if liste_transport[i][1] == plus_petit and liste_transport[indice_petit][0] != liste_transport[i][0]:
         if indice_petit + i == 1:
-            print("Egalite : marche et navette.")
+            print("Egalite : marcher et navette.")
             exit()
 
         elif indice_petit + i == 2:
-            print("Egalite : marche et metro.")
+            print("Egalite : marcher et metro.")
             exit()
 
         elif indice_petit + i == 3:

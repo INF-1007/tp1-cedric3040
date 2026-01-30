@@ -49,7 +49,7 @@ except ValueError:
     print("Erreur - donnees invalides.")
     exit()
 
-if n <= 0 or (etudiant != "O" and etudiant != "N"):
+if n < 0 or (etudiant != "O" and etudiant != "N"):
     print("Erreur - donnees invalides.")
     exit()
 
@@ -88,4 +88,4 @@ print(f"Forfaits de 12 billets - {B}")
 print(f"Forfaits de 5 billets - {C}")
 print(f"Billets unitaires - {D}")
 print(f"Total billets - {T}")
-print(f"Prix total - {prix_T:06.2f}$")
+print(f"Prix total - {prix_T:05.2f}$")

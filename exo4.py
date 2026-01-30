@@ -52,12 +52,12 @@ hauteur_m = hauteur_cm / 100
 pente = (hauteur_m / longueur_m) * 100
 angle = math.degrees(math.atan(hauteur_m / longueur_m))
 
-print(f"Pente: {pente:05.2f}%")
-print(f"Angle: {angle:05.2f} deg")
+print(f"Pente: {pente:5.2f}%")
+print(f"Angle: {angle:5.2f} deg")
 
 if pente <= 8.00:
     print("Conforme: OUI")
 else:
     print("Conforme: NON")
     depassement = pente - 8
-    print(f"Depassement: {depassement:05.2f}%")
+    print(f"Depassement: {depassement:5.2f}%")

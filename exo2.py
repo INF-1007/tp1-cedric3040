@@ -53,12 +53,16 @@ for i in range(len(FACTEURS)):
 niveau = []
 intensite_max = max(liste_intensite_brute)
 
+if intensite_max != 0:
 
-for i in range(len(liste_intensite_brute)):
-    niveau.append(int((liste_intensite_brute[i] / intensite_max) * 10 + 0.5))
+    for i in range(len(liste_intensite_brute)):
+        niveau.append(int((liste_intensite_brute[i] / intensite_max) * 10 + 0.5))
+else:
+    for i in range(8):
+        niveau.append(0) 
 
 hauteur_niveau = ["10 |", " 9 |", " 8 |", " 7 |", " 6 |", " 5 |", " 4 |", " 3 |"," 2 |"," 1 |"]
-print(niveau)
+
 indice_hauteur_niveau = 10
 liste_str_lettre = [" A", "B","C","D","E","F","G","H"]
 
@@ -66,7 +70,7 @@ for i in range (10):
     print(hauteur_niveau[i], end=" ")
 
 
-    for y in range(len(niveau)):
+    for y in range(8):
         if niveau[y] >= indice_hauteur_niveau:
             print("❚",end=" ")
         else:
